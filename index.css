@@ -6,13 +6,23 @@
     sans-serif;
   text-transform: capitalize;
   color: #f6f6f6;
+  transition: all ease-in-out 0.3s;
 }
+/* root  */
 :root {
   --color1: #282828;
   --color2: #1f1f1f;
   --color3: #2e2e2e;
-  --color4:#2c5688;
+  --color4: #2c5688;
+  --color5: #dfcc00;
+  --color6: #00ca94;
+  --color7: #db1200;
 }
+.remove {
+  display: none;
+}
+
+/* codes */
 .all-components {
   display: flex;
   flex-direction: row;
@@ -25,6 +35,12 @@
 .f-components {
   margin-top: 3rem;
   margin-left: 5rem;
+}
+.f-components i {
+  font-size: large;
+  padding: 10px;
+  color: #34629b;
+  font-family: fontawesome;
 }
 .f-components h2 {
   padding: 1rem;
@@ -52,29 +68,23 @@
   margin-left: 1.5rem;
   font-weight: bolder;
   list-style-type: none;
+  cursor: pointer;
 }
 .s-components li:hover {
   background-color: var(--color3);
   border-radius: 5px;
 }
-.t-components {
-  margin-left: 5rem;
-  margin-top: 5rem;
+.s-components i {
+  font-size: large;
+  padding: 10px;
+  color: var(--color6);
+  font-family: fontawesome;
 }
-.t-components h2 {
-  margin-left: 1rem;
-  font-size: 1.9em;
-  cursor: pointer;
-  font-weight: bolder;
-
-}
-.t-components li {
-  padding: 1rem;
-  margin-left: 2rem;
-}
-.t-components li:hover {
-  background-color: var(--color3);
-  border-radius: 5px;
+.s-components li:hover i {
+  font-size: large;
+  padding: 10px;
+  color: var(--color5);
+  font-family: fontawesome;
 }
 /* projects  */
 .projects {
@@ -91,24 +101,65 @@
   flex-direction: row;
 }
 .title-bar i {
+  font-family: fontawesome;
+  font-size: large;
   margin-right: 2rem;
-  padding: 0.3rem;
+  padding: 10px;
+  cursor: pointer;
 }
-.task-flex{
-    display: flex;
-    justify-content:space-between;
-    flex-direction: column;
+.title-bar i:hover {
+  color: var(--color5);
 }
-.task-bar{
-    display: flex;
 
-
+.task-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.task-bar i{
-    padding: 1rem 2rem;
-    background-color: var(--color4);
+.task-bar {
+  display: flex;
+  align-items: flex-end;
 }
-.input{
-    height: 3.3rem;
-    width: 100%;
+.task-bar i {
+  font-size: x-large;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--color4);
+  cursor: pointer;
+}
+.input {
+  height: 3.2rem;
+  width: 100%;
+  color: rgb(1, 1, 1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+.task-box {
+  margin-left: 2rem;
+}
+.task-box li {
+  border-radius: 4px;
+  background-color: var(--color3);
+  margin: 0.2rem;
+  padding: 0.4rem;
+  list-style-type: none;
+  padding: 10px;
+}
+.li-tasks {
+  display: flex;
+  justify-content: space-between;
+}
+.li-tasks div:hover {
+  cursor: pointer;
+  color: var(--color5);
+}
+.li-btn {
+  color: var(--color6);
+  margin-right: 20px;
+  padding: 5px;
+}
+.li-option {
+}
+.li-btn:hover {
+  color: var(--color7);
 }
