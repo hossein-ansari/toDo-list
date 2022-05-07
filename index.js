@@ -1,18 +1,7 @@
-let $ = document;
-let heighTasks = $.querySelector(".tasks");
-let heightProjects = $.querySelector(".projects");
-let heightInput = $.querySelector(".task-flex");
-let projectComponent = $.querySelector(".project-component");
-let projectsLi = $.querySelectorAll(".projects-li");
-let projectsIcon = $.querySelector(".projects-icon");
-
-// height screen
-let screenHight = window.innerHeight;
-heighTasks.style.height = `${screenHight}px `;
-heightProjects.style.height = `${screenHight}px`;
-heightInput.style.height = `${screenHight - 135}px`;
-
-// toggle project component
+"use strict";
+let projectComponent = document.querySelector(".project-component");
+let projectsLi = document.querySelectorAll(".projects-li");
+let projectsIcon = document.querySelector(".projects-icon");
 
 projectComponent.addEventListener("click", (e) => {
   if (projectsIcon.classList.contains("fa-angle-down")) {
