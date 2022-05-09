@@ -20,9 +20,14 @@
   --color8: #f6f6f6;
 }
 .remove {
-  display: none;
+  display: hidden;
+  opacity: 0;
 }
-
+.checkBtn{
+  color: rgb(0, 8, 255);
+  text-decoration: line-through;
+  margin: 100px;
+}
 /* codes */
 body{
   background-color: var(--color2);

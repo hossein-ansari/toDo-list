@@ -3,6 +3,7 @@ let input = document.querySelector(".input");
 let addTask = document.querySelector(".add-task");
 let ulTask = document.querySelector(".task-box");
 let trashBtn = document.querySelector(".fa-trash");
+
 let li = document.querySelector(".position");
 
 let toDoArray = [];
@@ -27,7 +28,11 @@ function addgenerator(todoElem) {
       "beforeend",
       '<li class="li-tasks position"><div>' +
         todoElem.title +
-        '</div><div class="li-option"><i class="li-btn fa-solid fa-check "></i><i onclick=" clearHandeler('+todoElem.id+') " class="fa-solid fa-trash li-btn"></i></div></li>'
+        '</div><div class="li-option"><i onclick="completeHandle(), completHandeler(' +
+        todoElem.id +
+        ')" class="fa-solid fa-check li-btn"></i><i onclick=" clearHandeler(' +
+        todoElem.id +
+        ')" class="fa-solid fa-trash li-btn"></i></div></li>'
     );
   });
 }
@@ -46,16 +51,28 @@ addTask.addEventListener("click", taskAdder);
 //  clear btn
 
 function clearHandeler(id) {
-  let localStorageTodos = JSON.parse(localStorage.getItem('todos'))
-  toDoArray = localStorageTodos
+  let localStorageTodos = JSON.parse(localStorage.getItem("todos"));
+  toDoArray = localStorageTodos;
 
- let mainTodoIndex = toDoArray.findIndex(function (todo) {
-     return todo.id === id
- })
-
- toDoArray.splice(mainTodoIndex , 1)
- localToDo(toDoArray)
- addgenerator(toDoArray)
+  let mainTodoIndex = toDoArray.findIndex(function (todo) {
+    return todo.id === id;
+  });
+  toDoArray.splice(mainTodoIndex, 1);
+  localToDo(toDoArray);
+  addgenerator(toDoArray);
 }
 
+function completHandeler(complete) {
+  let localStorageTodos = JSON.parse(localStorage.getItem("todos"));
+  toDoArray = localStorageTodos;
 
+  toDoArray.forEach(function (todo) {
+    if (todo.id == complete) {
+      todo.complete = !todo.complete;
+
+    }
+
+  });
+  localToDo(toDoArray);
+  addgenerator(toDoArray);
+}
