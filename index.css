@@ -44,6 +44,7 @@ body{
 }
 
 .f-components {
+  
   margin-top: 3rem;
   margin-left: 5rem;
 }
@@ -53,6 +54,7 @@ body{
   color: #34629b;
   font-family: fontawesome;
 }
+
 .f-components h2 {
   padding: 1rem;
   cursor: pointer;
@@ -121,7 +123,6 @@ body{
 .title-bar i:hover {
   color: var(--color5);
 }
-
 .task-flex {
   display: flex;
   flex-direction: column;
@@ -186,7 +187,8 @@ body{
   }
   .title-bar i{
     margin-right: 1rem;
-  }
+  }  
+
 }
 @media screen and (max-width: 1200px) {
   .f-components{
@@ -210,4 +212,5 @@ body{
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
 }

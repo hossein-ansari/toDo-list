@@ -12,8 +12,6 @@ function themeHandeler() {
     document.documentElement.style.setProperty("--color8", "#111");
     document.documentElement.style.setProperty("--color6", "#00505a");
 
-
-
   } else {
     themeFlag = false;
     document.documentElement.style.setProperty("--color1", "#282828");
@@ -21,7 +19,6 @@ function themeHandeler() {
     document.documentElement.style.setProperty("--color3", "#2e2e2e");
     document.documentElement.style.setProperty("--color8", "#f6f6f6");
     document.documentElement.style.setProperty("--color6", "#00ca94");
-
 
   }
 }
