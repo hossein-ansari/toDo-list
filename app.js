@@ -8,15 +8,18 @@ let li = document.querySelector(".position");
 
 let toDoArray = [];
 function taskAdder(lis) {
-  let newToDo = {
+  if (input.value != '') {
+          let newToDo = {
     id: toDoArray.length + 1,
     title: input.value,
     complete: false,
   };
+  
   toDoArray.push(newToDo);
   localToDo(toDoArray);
   addgenerator(toDoArray);
   input.value = "";
+  }
 }
 function localToDo(todoElem) {
   localStorage.setItem("todos", JSON.stringify(todoElem));
